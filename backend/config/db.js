@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const mongo_uri = 'mongodb+srv://foodie:xzZ0U6XawpnBJdFh@cluster0.brvjn.mongodb.net/foodie';
+const mongo_uri = '';
 
 export const connectDB = async () => {
     try {

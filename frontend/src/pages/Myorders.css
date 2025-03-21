@@ -19,6 +19,31 @@
 
 }
 
+.empty {
+    width: 100%;
+    /* background-color: #ecb5b5; */
+    display: flex;
+    justify-content: center;  /* Centers .empty1 horizontally */
+    align-items: center;      /* Centers .empty1 vertically */
+    height: 150px; /* Makes it take full screen height */
+}
+
+.empty1 {
+    width: 50%;
+    background-color: rgb(233, 218, 222);
+    display: flex;
+    align-items: center;   /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+    text-align: center;
+    height: 100px; 
+    margin:auto;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    font-weight: 600; /* Add height to make centering visible */
+}
+
+
+
 .my-orders-order img{
     width: 50px;
 

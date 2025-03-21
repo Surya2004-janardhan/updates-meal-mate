@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 export const StoreContext = createContext(null);
 
@@ -118,11 +119,16 @@ export const StoreContextProvider = (props) => {
     url,
     token,
     settoken,
+    fetchcartitems
   };
-
   return (
     <StoreContext.Provider value={contextvalue}>
       {props.children}
     </StoreContext.Provider>
   );
 };
+
+// StoreContextProvider.propTypes = {
+//   children: PropTypes.node.isRequired,
+// };
+

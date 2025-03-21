@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import "./FoodItem.css";
 import { StoreContext } from "../../context/Storecontext";
 // import "../../assets/rating_starts.png"
@@ -6,11 +6,13 @@ import { StoreContext } from "../../context/Storecontext";
 // import "../../assets/add_icon_green.png"
 // import "../../assets/add_icon_white.png"
 import { assets } from "../../assets/assets";
-export default function FoodItem({ id, name, price, description, image }) {
+export default function FoodItem( {id, name, price, description, image} ) {
   // console.log(assets.add_icon_white)
+
   // const [itemcount ,setitemcount] = useState(0)
-  const { cartitems, addtocart, removefromcart, setcartitems, url } =
+  const { cartitems, addtocart, removefromcart, url } =
     useContext(StoreContext);
+    // console.log(name,price,description,image)
   return (
     <div className="food-item">
       <div className="food-item-image-container">
@@ -46,7 +48,8 @@ export default function FoodItem({ id, name, price, description, image }) {
           {/* <img src="{asse  ts.rating_starts" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""> */}
         </div>
         <p className="food-item-desc">{description}</p>
-        <p className="food-item-price">${price}</p>
+        <p className="food-item-price">₹
+        {price}</p>
       </div>
     </div>
   );

@@ -15,7 +15,9 @@
 
 .cart-items-item{
     margin: 10px 0px;
-    color: black;
+    /* color: black;
+     */
+     color: #555;
 }
 .cart-items-item img{
     width: 50px;

@@ -1,6 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react'
+import  { useContext, useEffect, useState } from 'react'
 import "./Myorders.css"
 import axios from 'axios'
+// import toast from "react-toastify"
 import { StoreContext } from '../context/Storecontext'
 import { assets } from '../assets/assets'
 export default function Myorders() {
@@ -13,6 +14,7 @@ export default function Myorders() {
         
         setdata(response.data.data)
         console.log(data)
+        // toast.success("placed ")
         // console.log(response)
         // console.log(data.data)
     }
@@ -20,14 +22,19 @@ export default function Myorders() {
     useEffect(() => {
         if (token){
             fetchorders()
+            // toast.success("Order placed successfully!", { autoClose: 3000 })
 
         }
     },[token])
 
+// https://github.com/Surya2004-janardhan/updates-meal-mate
+
   return (
     <div className='my-orders'>
 
-        <h2>my orders resolve errors and routes conflicts</h2>
+        <h3>All your Orders</h3>
+        {/* <toast className="succ"></toast> */}
+        {/* {toast.success("Placed order Successfully")} */}
 
         <div className="container">
             {data.map((order,index) =>{
@@ -50,6 +57,12 @@ export default function Myorders() {
                     </div>
                 )
             })}
+        </div>
+        <div className='empty'>
+            <div className='empty1'>
+                ---Order More---
+            </div>
+
         </div>
       
     </div>

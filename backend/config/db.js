@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const mongo_uri = '';
+const mongo_uri = 'keep_mongodb_uri_later';
 
 export const connectDB = async () => {
     try {

@@ -5,7 +5,9 @@ import PropTypes from "prop-types";
 export const StoreContext = createContext(null);
 
 export const StoreContextProvider = (props) => {
-  const url = "http://localhost:4000";
+  // const url = "http://localhost:4000";
+  const url = "https://meal-mate-1-jnfl.onrender.com";
+  
   const [food_list, setfoodlist] = useState([]);
   const [cartitems, setcartitems] = useState({});
   const [token, settoken] = useState("");
